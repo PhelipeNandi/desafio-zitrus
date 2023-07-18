@@ -68,4 +68,9 @@ Na aba Server configure a URL para ser: `http://localhost:8080/desafio-zitrus/so
 
 Para a configuração do Docker(MySQL), basta você editar o arquivo docker-compose na linha de volumes, alterando o path `C:\Users\pheli\Documents\Phelipe\Projetos` para uma pasta de seu computador.
 
+```
+# Inicie o container do MySQL
+$ docker-compose up -d
+```
+
 Agora basta rodar o JBoss/Wildfly Server que a aplicação irá iniciar.
