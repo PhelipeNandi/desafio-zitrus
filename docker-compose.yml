@@ -4,10 +4,10 @@ services:
   mysqldev:
     image: mysql:5.7
     volumes:
-      - C:\Users\pheli\Documents\Phelipe\Projetos:/mysql/mysql-dev #troca /var/lib/mysql por uma pasta onde ele vai salvar o banco na tua máquina
+      - C:\Users\pheli\Documents\Phelipe\Projetos:/mysql/mysql-dev
     environment:
-      MYSQL_ROOT_PASSWORD: root #login do usuário root
-      MYSQL_DATABASE: desafio #nome do schema do banco
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: desafio
       TZ: America/Sao_Paulo
     ports:
-      - 13306:3306 #vai subir na 13306 na tua máquina
+      - 13306:3306
