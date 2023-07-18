@@ -1,4 +1,4 @@
-package br.com.desafio.service;
+package br.com.desafio.dao;
 
 import br.com.desafio.enums.AutorizacaoEnum;
 import br.com.desafio.enums.SexoEnum;
@@ -9,11 +9,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SolicitacaoService {
+public class SolicitacaoDAO {
 
     private final Connection connection;
 
-    public SolicitacaoService(Connection connection) {
+    public SolicitacaoDAO(Connection connection) {
         this.connection = connection;
     }
 
@@ -103,8 +103,8 @@ public class SolicitacaoService {
         SexoEnum sexo = SexoEnum.fromValue(resultSet.getString("sexo"));
         AutorizacaoEnum autorizado = AutorizacaoEnum.fromValue(resultSet.getString("autorizado"));
 
-        ProcedimentoService procedimentoService = new ProcedimentoService(connection);
-        Procedimento procedimento = procedimentoService.buscaProcedimentoPorId(idProcedimento);
+        ProcedimentoDAO procedimentoDAO = new ProcedimentoDAO(connection);
+        Procedimento procedimento = procedimentoDAO.buscaProcedimentoPorId(idProcedimento);
 
         Solicitacao solicitacao = new Solicitacao(id, procedimento, nome, idade, sexo, autorizado);
         return solicitacao;

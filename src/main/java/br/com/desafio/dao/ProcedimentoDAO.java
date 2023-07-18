@@ -1,7 +1,6 @@
-package br.com.desafio.service;
+package br.com.desafio.dao;
 
 import br.com.desafio.model.Procedimento;
-import com.mysql.cj.protocol.Resultset;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,11 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProcedimentoService {
+public class ProcedimentoDAO {
 
     private final Connection connection;
 
-    public ProcedimentoService(Connection connection) {
+    public ProcedimentoDAO(Connection connection) {
         this.connection = connection;
     }
 

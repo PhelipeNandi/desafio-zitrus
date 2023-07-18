@@ -1,4 +1,4 @@
-package br.com.desafio.service;
+package br.com.desafio.dao;
 
 
 
@@ -9,11 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RegraService {
+public class RegraDAO {
 
     private final Connection connection;
 
-    public RegraService(Connection connection) {
+    public RegraDAO(Connection connection) {
         this.connection = connection;
     }
 
