@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="root" id="4">
+        <insert tableName="regra">
+            <column name="id" autoIncrement="true" />
+            <column name="idprocedimento" value="2"/>
+            <column name="idade" value="20"/>
+            <column name="sexo" value="M"/>
+        </insert>
+        <insert tableName="regra">
+            <column name="id" autoIncrement="true" />
+            <column name="idprocedimento" value="3"/>
+            <column name="idade" value="10"/>
+            <column name="sexo" value="M"/>
+        </insert>
+        <insert tableName="regra">
+            <column name="id" autoIncrement="true" />
+            <column name="idprocedimento" value="2"/>
+            <column name="idade" value="30"/>
+            <column name="sexo" value="F"/>
+        </insert>
+        <insert tableName="regra">
+            <column name="id" autoIncrement="true" />
+            <column name="idprocedimento" value="1"/>
+            <column name="idade" value="20"/>
+            <column name="sexo" value="M"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="root" id="2">
+        <createTable tableName="regra">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="idprocedimento" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_regra_procedimento" references="procedimento(id)" />
+            </column>
+            <column name="idade" type="INT">
+                <constraints nullable="false" />
+            </column>
+            <column name="sexo" type="CHAR(1)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="regra"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
