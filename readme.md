@@ -4,14 +4,14 @@ Você é o desenvolvedor responsável por um sistema de controle de autorizaçõ
 procedimentos médicos para um plano de saúde. Os critérios para permitir a execução de um
 procedimento são idade e sexo, de acordo com a tabela a seguir:
 
-| PROCEDIMENTO  | IDADE | SEXO | PERMITIDO | 
-| :------------ |:-----:|-----:|-----------|
-| 1234|  10   |    M | NÃO       |
-| 4567|  20   |    M | SIM       |
-| 6789|  10   |    F | NÃO       |
-| 6789|  10   |    M | SIM       |
-| 1234|  20   |    M | SIM       |
-| 4567|  30   |    F | SIM       |
+| PROCEDIMENTO | IDADE | SEXO | PERMITIDO |
+|--------------|-------|------|:---------:|
+| 1234         | 10    | M    | NÃO       |
+| 4567         | 20    | M    | SIM       |
+| 6789         | 10    | F    | NÃO       |
+| 6789         | 10    | M    | SIM       |
+| 1234         | 20    | M    | SIM       |
+| 4567         | 30    | F    | SIM       |
 
 Procedimentos não listados na tabela devem ser negados no cadastro, com mensagens de
 retorno da requisição, justificados.
